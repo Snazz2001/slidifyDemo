@@ -1,0 +1,41 @@
+---
+title       : My slidify Test
+subtitle    : My sub test
+author      : Zheng
+job         : Data analyst
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+github :
+  user : Snazz2001
+  repo : slidifyDemo
+---
+
+## Read-And-Delete
+
+1. Edit YAML front matter
+2. Write using R Markdown
+3. Use an empty line followed by three dashes to separate slides!
+
+--- .class #id 
+
+## Animated List
+My Test
+> 1. point1
+> 2. point2
+> 3. point3
+---
+
+## Slide 3 Google Vis
+
+```{r, echo=FALSE, results='asis', message=FALSE}
+require(UsingR)
+library(googleVis)
+M<-gvisMotionChart(Fruits,idvar="Fruit",timevar="Year")
+print(M,tag = 'chart')
+```
+
+
